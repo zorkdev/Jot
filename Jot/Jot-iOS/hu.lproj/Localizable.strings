@@ -1,0 +1,15 @@
+"productName" = "Jot";
+
+"deleteButton" = "Törlés";
+"shareButton" = "Megosztás";
+
+"shareActivity" = "Jot megosztása";
+"deleteActivity" = "Jot törlése";
+"appendActivity" = "Hozzáadás a Jothoz";
+"saveActivity" = "Jot mentése";
+
+"shareKeyword" = "megosztás";
+"deleteKeyword" = "törlés";
+"appendKeyword" = "hozzáadás";
+"saveKeyword" = "mentés";
+"noteKeyword" = "jegyzet";

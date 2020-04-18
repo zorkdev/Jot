@@ -1,0 +1,1220 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A0F505A2459DEDD0041F898 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9A0F505D2459DEDD0041F898 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (project_codegen, ); }; };
+		9A0F505B2459DEDD0041F898 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9A0F505D2459DEDD0041F898 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (project_codegen, ); }; };
+		9A0F50652459F3B30041F898 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A0F50682459F3B30041F898 /* AppIntentVocabulary.plist */; };
+		9A0F50662459F3B30041F898 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A0F50682459F3B30041F898 /* AppIntentVocabulary.plist */; };
+		9A1569682454975E0074823D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A15696A2454975E0074823D /* InfoPlist.strings */; };
+		9A15696E245498780074823D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A156970245498780074823D /* InfoPlist.strings */; };
+		9A40845E2444DDA700909BCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A40845D2444DDA700909BCF /* AppDelegate.swift */; };
+		9A4084652444DDA900909BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4084642444DDA900909BCF /* Assets.xcassets */; };
+		9A40846B2444DDA900909BCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4084692444DDA900909BCF /* Main.storyboard */; };
+		9A4084CF2444DEDC00909BCF /* JotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A4084CE2444DEDC00909BCF /* JotKit */; };
+		9A4084D72445299C00909BCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4084D62445299C00909BCF /* AppDelegate.swift */; };
+		9A4084D92445299C00909BCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4084D82445299C00909BCF /* SceneDelegate.swift */; };
+		9A4084E0244529A100909BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4084DF244529A100909BCF /* Assets.xcassets */; };
+		9A4084E6244529A100909BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4084E4244529A100909BCF /* LaunchScreen.storyboard */; };
+		9A7E7ED4244B1C6A0095BF49 /* JotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A7E7ED3244B1C6A0095BF49 /* JotKit */; };
+		9A8B885D244F20E4003E4B8F /* JotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4084812444DDA900909BCF /* JotUITests.swift */; };
+		9A8B885E244F20E4003E4B8F /* JotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4084812444DDA900909BCF /* JotUITests.swift */; };
+		9AB4C45E2454922C00BC0DAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4C4612454922C00BC0DAC /* Localizable.strings */; };
+		9AB4C45F2454922C00BC0DAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4C4612454922C00BC0DAC /* Localizable.strings */; };
+		9AC80D8E24549EE5005FE3B3 /* ServicesMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AC80D9024549EE5005FE3B3 /* ServicesMenu.strings */; };
+		9ACA31C1245619E100E86B22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4C4612454922C00BC0DAC /* Localizable.strings */; };
+		9ACA31C2245619E600E86B22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4C4612454922C00BC0DAC /* Localizable.strings */; };
+		9AD35D2C245504A300F8343C /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD35D2B245504A300F8343C /* IntentHandler.swift */; };
+		9AD35D30245504A300F8343C /* JotIntentsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9AD35D29245504A300F8343C /* JotIntentsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9AD35D36245508C700F8343C /* JotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9AD35D35245508C700F8343C /* JotKit */; };
+		9ADC37572454A1850007823E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC37592454A1850007823E /* InfoPlist.strings */; };
+		9AFCC2222451E57300642D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AFCC2212451E57300642D70 /* Assets.xcassets */; };
+		9AFCC2242451E57300642D70 /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFCC2232451E57300642D70 /* ActionRequestHandler.swift */; };
+		9AFCC22B2451E57300642D70 /* JotActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9AFCC21F2451E57300642D70 /* JotActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9AFCC2332451E97300642D70 /* JotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9AFCC2322451E97300642D70 /* JotKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A40847E2444DDA900909BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A4084522444DDA700909BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A4084592444DDA700909BCF;
+			remoteInfo = Jot;
+		};
+		9A4084F8244529A200909BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A4084522444DDA700909BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A4084D32445299C00909BCF;
+			remoteInfo = "Jot-iOS";
+		};
+		9AD35D2E245504A300F8343C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A4084522444DDA700909BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AD35D28245504A300F8343C;
+			remoteInfo = "JotIntentsExtension-iOS";
+		};
+		9AFCC2292451E57300642D70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A4084522444DDA700909BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AFCC21E2451E57300642D70;
+			remoteInfo = "JotExtension-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9AFCC22C2451E57300642D70 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9AD35D30245504A300F8343C /* JotIntentsExtension.appex in Embed App Extensions */,
+				9AFCC22B2451E57300642D70 /* JotActionExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9A0F505C2459DEDD0041F898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		9A0F50612459DEF20041F898 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Intents.strings; sourceTree = "<group>"; };
+		9A0F50672459F3B30041F898 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/AppIntentVocabulary.plist; sourceTree = "<group>"; };
+		9A0F50692459F3B70041F898 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = hu; path = hu.lproj/AppIntentVocabulary.plist; sourceTree = "<group>"; };
+		9A1569692454975E0074823D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A15696B245497610074823D /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A15696F245498780074823D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A1569712454987A0074823D /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A40845A2444DDA700909BCF /* Jot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A40845D2444DDA700909BCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A4084642444DDA900909BCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A40846A2444DDA900909BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A40846C2444DDA900909BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A40846D2444DDA900909BCF /* Jot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jot.entitlements; sourceTree = "<group>"; };
+		9A4084782444DDA900909BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A40847D2444DDA900909BCF /* JotUITests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JotUITests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4084812444DDA900909BCF /* JotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JotUITests.swift; sourceTree = "<group>"; };
+		9A4084D42445299C00909BCF /* Jot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4084D62445299C00909BCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A4084D82445299C00909BCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9A4084DF244529A100909BCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A4084E5244529A100909BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A4084E7244529A100909BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A4084F7244529A100909BCF /* JotUITests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JotUITests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8B8851244F075A003E4B8F /* Jot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jot.entitlements; sourceTree = "<group>"; };
+		9A8B8853244F1CD1003E4B8F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9A8B8854244F1CD1003E4B8F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9A8B8856244F1EC8003E4B8F /* Jot-iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Jot-iOS.xctestplan"; sourceTree = "<group>"; };
+		9A8B8857244F1EEE003E4B8F /* Jot-macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Jot-macOS.xctestplan"; sourceTree = "<group>"; };
+		9A8B885F244F212D003E4B8F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		9AB4C45824548A9D00BC0DAC /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Main.strings; sourceTree = "<group>"; };
+		9AB4C4602454922C00BC0DAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9AB4C4622454923000BC0DAC /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9AC80D8F24549EE5005FE3B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
+		9AC80D9124549EEA005FE3B3 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
+		9AD35D242454A84600F8343C /* apple-app-site-association */ = {isa = PBXFileReference; lastKnownFileType = text; name = "apple-app-site-association"; path = "../docs/apple-app-site-association"; sourceTree = "<group>"; };
+		9AD35D29245504A300F8343C /* JotIntentsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JotIntentsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AD35D2B245504A300F8343C /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		9AD35D2D245504A300F8343C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AD35D372455121500F8343C /* JotIntentsExtension-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "JotIntentsExtension-iOS.entitlements"; sourceTree = "<group>"; };
+		9ADC37582454A1850007823E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9ADC375A2454A1870007823E /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9ADE768624505F2A00D41776 /* .swiftlint_analyze.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint_analyze.yml; path = ../.swiftlint_analyze.yml; sourceTree = "<group>"; };
+		9ADE768724505F2A00D41776 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
+		9AFCC21F2451E57300642D70 /* JotActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JotActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AFCC2212451E57300642D70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9AFCC2232451E57300642D70 /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
+		9AFCC2282451E57300642D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AFCC2302451E82100642D70 /* JotExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JotExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A4084572444DDA700909BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4084CF2444DEDC00909BCF /* JotKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A40847A2444DDA900909BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4084D12445299C00909BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A7E7ED4244B1C6A0095BF49 /* JotKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4084F4244529A100909BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AD35D26245504A300F8343C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AD35D36245508C700F8343C /* JotKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AFCC21C2451E57300642D70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AFCC2332451E97300642D70 /* JotKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A4084512444DDA700909BCF = {
+			isa = PBXGroup;
+			children = (
+				9A8B8852244F1CB1003E4B8F /* Supporting Files */,
+				9A4084D52445299C00909BCF /* Jot-iOS */,
+				9A40845C2444DDA700909BCF /* Jot-macOS */,
+				9AFCC2202451E57300642D70 /* JotActionExtension-iOS */,
+				9AD35D2A245504A300F8343C /* JotIntentsExtension-iOS */,
+				9A4084752444DDA900909BCF /* JotTests */,
+				9A40845B2444DDA700909BCF /* Products */,
+				9AD35D34245508C700F8343C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9A40845B2444DDA700909BCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A4084D42445299C00909BCF /* Jot.app */,
+				9A40845A2444DDA700909BCF /* Jot.app */,
+				9AFCC21F2451E57300642D70 /* JotActionExtension.appex */,
+				9A4084F7244529A100909BCF /* JotUITests-iOS.xctest */,
+				9A40847D2444DDA900909BCF /* JotUITests-macOS.xctest */,
+				9AD35D29245504A300F8343C /* JotIntentsExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A40845C2444DDA700909BCF /* Jot-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A40846C2444DDA900909BCF /* Info.plist */,
+				9A40846D2444DDA900909BCF /* Jot.entitlements */,
+				9A40845D2444DDA700909BCF /* AppDelegate.swift */,
+				9A4084692444DDA900909BCF /* Main.storyboard */,
+				9A156970245498780074823D /* InfoPlist.strings */,
+				9AC80D9024549EE5005FE3B3 /* ServicesMenu.strings */,
+				9A4084642444DDA900909BCF /* Assets.xcassets */,
+			);
+			path = "Jot-macOS";
+			sourceTree = "<group>";
+		};
+		9A4084752444DDA900909BCF /* JotTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A4084782444DDA900909BCF /* Info.plist */,
+				9A4084812444DDA900909BCF /* JotUITests.swift */,
+				9A8B8856244F1EC8003E4B8F /* Jot-iOS.xctestplan */,
+				9A8B8857244F1EEE003E4B8F /* Jot-macOS.xctestplan */,
+			);
+			path = JotTests;
+			sourceTree = "<group>";
+		};
+		9A4084D52445299C00909BCF /* Jot-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9A4084E7244529A100909BCF /* Info.plist */,
+				9A8B8851244F075A003E4B8F /* Jot.entitlements */,
+				9A4084D62445299C00909BCF /* AppDelegate.swift */,
+				9A4084D82445299C00909BCF /* SceneDelegate.swift */,
+				9A4084E4244529A100909BCF /* LaunchScreen.storyboard */,
+				9ADC37592454A1850007823E /* InfoPlist.strings */,
+				9AB4C4612454922C00BC0DAC /* Localizable.strings */,
+				9A0F505D2459DEDD0041F898 /* Intents.intentdefinition */,
+				9A0F50682459F3B30041F898 /* AppIntentVocabulary.plist */,
+				9A4084DF244529A100909BCF /* Assets.xcassets */,
+			);
+			path = "Jot-iOS";
+			sourceTree = "<group>";
+		};
+		9A8B8852244F1CB1003E4B8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A8B8853244F1CD1003E4B8F /* README.md */,
+				9A8B8854244F1CD1003E4B8F /* LICENSE */,
+				9AD35D242454A84600F8343C /* apple-app-site-association */,
+				9A8B885F244F212D003E4B8F /* .gitignore */,
+				9ADE768724505F2A00D41776 /* .swiftlint.yml */,
+				9ADE768624505F2A00D41776 /* .swiftlint_analyze.yml */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AD35D2A245504A300F8343C /* JotIntentsExtension-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9AD35D2D245504A300F8343C /* Info.plist */,
+				9AD35D372455121500F8343C /* JotIntentsExtension-iOS.entitlements */,
+				9AD35D2B245504A300F8343C /* IntentHandler.swift */,
+			);
+			path = "JotIntentsExtension-iOS";
+			sourceTree = "<group>";
+		};
+		9AD35D34245508C700F8343C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AFCC2202451E57300642D70 /* JotActionExtension-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9AFCC2282451E57300642D70 /* Info.plist */,
+				9AFCC2302451E82100642D70 /* JotExtension.entitlements */,
+				9AFCC2232451E57300642D70 /* ActionRequestHandler.swift */,
+				9A15696A2454975E0074823D /* InfoPlist.strings */,
+				9AFCC2212451E57300642D70 /* Assets.xcassets */,
+			);
+			path = "JotActionExtension-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A4084592444DDA700909BCF /* Jot-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A4084862444DDA900909BCF /* Build configuration list for PBXNativeTarget "Jot-macOS" */;
+			buildPhases = (
+				9ADE768A2450604B00D41776 /* SwiftLint */,
+				9A4084562444DDA700909BCF /* Sources */,
+				9A4084572444DDA700909BCF /* Frameworks */,
+				9A4084582444DDA700909BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jot-macOS";
+			packageProductDependencies = (
+				9A4084CE2444DEDC00909BCF /* JotKit */,
+			);
+			productName = Jot;
+			productReference = 9A40845A2444DDA700909BCF /* Jot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A40847C2444DDA900909BCF /* JotUITests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A40848C2444DDA900909BCF /* Build configuration list for PBXNativeTarget "JotUITests-macOS" */;
+			buildPhases = (
+				9A4084792444DDA900909BCF /* Sources */,
+				9A40847A2444DDA900909BCF /* Frameworks */,
+				9A40847B2444DDA900909BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A40847F2444DDA900909BCF /* PBXTargetDependency */,
+			);
+			name = "JotUITests-macOS";
+			productName = JotUITests;
+			productReference = 9A40847D2444DDA900909BCF /* JotUITests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9A4084D32445299C00909BCF /* Jot-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A4084FE244529A200909BCF /* Build configuration list for PBXNativeTarget "Jot-iOS" */;
+			buildPhases = (
+				9ADE76892450601F00D41776 /* SwiftLint */,
+				9A4084D02445299C00909BCF /* Sources */,
+				9A4084D12445299C00909BCF /* Frameworks */,
+				9A4084D22445299C00909BCF /* Resources */,
+				9AFCC22C2451E57300642D70 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AFCC22A2451E57300642D70 /* PBXTargetDependency */,
+				9AD35D2F245504A300F8343C /* PBXTargetDependency */,
+			);
+			name = "Jot-iOS";
+			packageProductDependencies = (
+				9A7E7ED3244B1C6A0095BF49 /* JotKit */,
+			);
+			productName = "Jot-iOS";
+			productReference = 9A4084D42445299C00909BCF /* Jot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A4084F6244529A100909BCF /* JotUITests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A408504244529A200909BCF /* Build configuration list for PBXNativeTarget "JotUITests-iOS" */;
+			buildPhases = (
+				9A4084F3244529A100909BCF /* Sources */,
+				9A4084F4244529A100909BCF /* Frameworks */,
+				9A4084F5244529A100909BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A4084F9244529A200909BCF /* PBXTargetDependency */,
+			);
+			name = "JotUITests-iOS";
+			productName = "Jot-iOSUITests";
+			productReference = 9A4084F7244529A100909BCF /* JotUITests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9AD35D28245504A300F8343C /* JotIntentsExtension-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AD35D33245504A300F8343C /* Build configuration list for PBXNativeTarget "JotIntentsExtension-iOS" */;
+			buildPhases = (
+				9AD35D25245504A300F8343C /* Sources */,
+				9AD35D26245504A300F8343C /* Frameworks */,
+				9AD35D27245504A300F8343C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JotIntentsExtension-iOS";
+			packageProductDependencies = (
+				9AD35D35245508C700F8343C /* JotKit */,
+			);
+			productName = "JotIntentsExtension-iOS";
+			productReference = 9AD35D29245504A300F8343C /* JotIntentsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		9AFCC21E2451E57300642D70 /* JotActionExtension-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AFCC22F2451E57300642D70 /* Build configuration list for PBXNativeTarget "JotActionExtension-iOS" */;
+			buildPhases = (
+				9AFCC21B2451E57300642D70 /* Sources */,
+				9AFCC21C2451E57300642D70 /* Frameworks */,
+				9AFCC21D2451E57300642D70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JotActionExtension-iOS";
+			packageProductDependencies = (
+				9AFCC2322451E97300642D70 /* JotKit */,
+			);
+			productName = "JotExtension-iOS";
+			productReference = 9AFCC21F2451E57300642D70 /* JotActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A4084522444DDA700909BCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Zorkdev;
+				TargetAttributes = {
+					9A4084592444DDA700909BCF = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					9A40847C2444DDA900909BCF = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 9A4084592444DDA700909BCF;
+					};
+					9A4084D32445299C00909BCF = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					9A4084F6244529A100909BCF = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 9A4084D32445299C00909BCF;
+					};
+					9AD35D28245504A300F8343C = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					9AFCC21E2451E57300642D70 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 9A4084552444DDA700909BCF /* Build configuration list for PBXProject "Jot" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				hu,
+			);
+			mainGroup = 9A4084512444DDA700909BCF;
+			productRefGroup = 9A40845B2444DDA700909BCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A4084D32445299C00909BCF /* Jot-iOS */,
+				9A4084592444DDA700909BCF /* Jot-macOS */,
+				9AFCC21E2451E57300642D70 /* JotActionExtension-iOS */,
+				9AD35D28245504A300F8343C /* JotIntentsExtension-iOS */,
+				9A4084F6244529A100909BCF /* JotUITests-iOS */,
+				9A40847C2444DDA900909BCF /* JotUITests-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A4084582444DDA700909BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC80D8E24549EE5005FE3B3 /* ServicesMenu.strings in Resources */,
+				9A40846B2444DDA900909BCF /* Main.storyboard in Resources */,
+				9A15696E245498780074823D /* InfoPlist.strings in Resources */,
+				9AB4C45F2454922C00BC0DAC /* Localizable.strings in Resources */,
+				9A4084652444DDA900909BCF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A40847B2444DDA900909BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4084D22445299C00909BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4084E6244529A100909BCF /* LaunchScreen.storyboard in Resources */,
+				9A0F50652459F3B30041F898 /* AppIntentVocabulary.plist in Resources */,
+				9ADC37572454A1850007823E /* InfoPlist.strings in Resources */,
+				9AB4C45E2454922C00BC0DAC /* Localizable.strings in Resources */,
+				9A4084E0244529A100909BCF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4084F5244529A100909BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AD35D27245504A300F8343C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A0F50662459F3B30041F898 /* AppIntentVocabulary.plist in Resources */,
+				9ACA31C1245619E100E86B22 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AFCC21D2451E57300642D70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AFCC2222451E57300642D70 /* Assets.xcassets in Resources */,
+				9ACA31C2245619E600E86B22 /* Localizable.strings in Resources */,
+				9A1569682454975E0074823D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9ADE76892450601F00D41776 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ..\nsh Tools/Scripts/swiftlint.sh\n";
+		};
+		9ADE768A2450604B00D41776 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ..\nsh Tools/Scripts/swiftlint.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A4084562444DDA700909BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A40845E2444DDA700909BCF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4084792444DDA900909BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8B885E244F20E4003E4B8F /* JotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4084D02445299C00909BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A0F505A2459DEDD0041F898 /* Intents.intentdefinition in Sources */,
+				9A4084D72445299C00909BCF /* AppDelegate.swift in Sources */,
+				9A4084D92445299C00909BCF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4084F3244529A100909BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8B885D244F20E4003E4B8F /* JotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AD35D25245504A300F8343C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A0F505B2459DEDD0041F898 /* Intents.intentdefinition in Sources */,
+				9AD35D2C245504A300F8343C /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AFCC21B2451E57300642D70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AFCC2242451E57300642D70 /* ActionRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A40847F2444DDA900909BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A4084592444DDA700909BCF /* Jot-macOS */;
+			targetProxy = 9A40847E2444DDA900909BCF /* PBXContainerItemProxy */;
+		};
+		9A4084F9244529A200909BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A4084D32445299C00909BCF /* Jot-iOS */;
+			targetProxy = 9A4084F8244529A200909BCF /* PBXContainerItemProxy */;
+		};
+		9AD35D2F245504A300F8343C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AD35D28245504A300F8343C /* JotIntentsExtension-iOS */;
+			targetProxy = 9AD35D2E245504A300F8343C /* PBXContainerItemProxy */;
+		};
+		9AFCC22A2451E57300642D70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AFCC21E2451E57300642D70 /* JotActionExtension-iOS */;
+			targetProxy = 9AFCC2292451E57300642D70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A0F505D2459DEDD0041F898 /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A0F505C2459DEDD0041F898 /* Base */,
+				9A0F50612459DEF20041F898 /* hu */,
+			);
+			name = Intents.intentdefinition;
+			sourceTree = "<group>";
+		};
+		9A0F50682459F3B30041F898 /* AppIntentVocabulary.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A0F50672459F3B30041F898 /* en */,
+				9A0F50692459F3B70041F898 /* hu */,
+			);
+			name = AppIntentVocabulary.plist;
+			sourceTree = "<group>";
+		};
+		9A15696A2454975E0074823D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A1569692454975E0074823D /* en */,
+				9A15696B245497610074823D /* hu */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A156970245498780074823D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A15696F245498780074823D /* en */,
+				9A1569712454987A0074823D /* hu */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A4084692444DDA900909BCF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A40846A2444DDA900909BCF /* Base */,
+				9AB4C45824548A9D00BC0DAC /* hu */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9A4084E4244529A100909BCF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A4084E5244529A100909BCF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9AB4C4612454922C00BC0DAC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AB4C4602454922C00BC0DAC /* en */,
+				9AB4C4622454923000BC0DAC /* hu */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		9AC80D9024549EE5005FE3B3 /* ServicesMenu.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AC80D8F24549EE5005FE3B3 /* en */,
+				9AC80D9124549EEA005FE3B3 /* hu */,
+			);
+			name = ServicesMenu.strings;
+			sourceTree = "<group>";
+		};
+		9ADC37592454A1850007823E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9ADC37582454A1850007823E /* en */,
+				9ADC375A2454A1870007823E /* hu */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A4084842444DDA900909BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9A4084852444DDA900909BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		9A4084872444DDA900909BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Jot-macOS/Jot.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Jot-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.Jot;
+				PRODUCT_NAME = Jot;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9A4084882444DDA900909BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Jot-macOS/Jot.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Jot-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.Jot;
+				PRODUCT_NAME = Jot;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9A40848D2444DDA900909BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = JotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.JotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Jot-macOS";
+			};
+			name = Debug;
+		};
+		9A40848E2444DDA900909BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = JotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.JotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Jot-macOS";
+			};
+			name = Release;
+		};
+		9A4084FF244529A200909BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Jot-iOS/Jot.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Jot-iOS/Info.plist";
+				INTENTS_CODEGEN_LANGUAGE = Swift;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.Jot;
+				PRODUCT_NAME = Jot;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A408500244529A200909BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Jot-iOS/Jot.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Jot-iOS/Info.plist";
+				INTENTS_CODEGEN_LANGUAGE = Swift;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.Jot;
+				PRODUCT_NAME = Jot;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A408505244529A200909BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = JotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.JotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Jot-iOS";
+			};
+			name = Debug;
+		};
+		9A408506244529A200909BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = JotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.JotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Jot-iOS";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9AD35D31245504A300F8343C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "JotIntentsExtension-iOS/JotIntentsExtension-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "JotIntentsExtension-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.Jot.IntentsExtension;
+				PRODUCT_NAME = JotIntentsExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9AD35D32245504A300F8343C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "JotIntentsExtension-iOS/JotIntentsExtension-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "JotIntentsExtension-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.Jot.IntentsExtension;
+				PRODUCT_NAME = JotIntentsExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9AFCC22D2451E57300642D70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "JotActionExtension-iOS/JotExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "JotActionExtension-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.Jot.ActionExtension;
+				PRODUCT_NAME = JotActionExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9AFCC22E2451E57300642D70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "JotActionExtension-iOS/JotExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX9VZ58J6W;
+				INFOPLIST_FILE = "JotActionExtension-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorkdev.Jot.ActionExtension;
+				PRODUCT_NAME = JotActionExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A4084552444DDA700909BCF /* Build configuration list for PBXProject "Jot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4084842444DDA900909BCF /* Debug */,
+				9A4084852444DDA900909BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A4084862444DDA900909BCF /* Build configuration list for PBXNativeTarget "Jot-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4084872444DDA900909BCF /* Debug */,
+				9A4084882444DDA900909BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A40848C2444DDA900909BCF /* Build configuration list for PBXNativeTarget "JotUITests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A40848D2444DDA900909BCF /* Debug */,
+				9A40848E2444DDA900909BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A4084FE244529A200909BCF /* Build configuration list for PBXNativeTarget "Jot-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4084FF244529A200909BCF /* Debug */,
+				9A408500244529A200909BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A408504244529A200909BCF /* Build configuration list for PBXNativeTarget "JotUITests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A408505244529A200909BCF /* Debug */,
+				9A408506244529A200909BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AD35D33245504A300F8343C /* Build configuration list for PBXNativeTarget "JotIntentsExtension-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AD35D31245504A300F8343C /* Debug */,
+				9AD35D32245504A300F8343C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AFCC22F2451E57300642D70 /* Build configuration list for PBXNativeTarget "JotActionExtension-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AFCC22D2451E57300642D70 /* Debug */,
+				9AFCC22E2451E57300642D70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A4084CE2444DEDC00909BCF /* JotKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JotKit;
+		};
+		9A7E7ED3244B1C6A0095BF49 /* JotKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JotKit;
+		};
+		9AD35D35245508C700F8343C /* JotKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JotKit;
+		};
+		9AFCC2322451E97300642D70 /* JotKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JotKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 9A4084522444DDA700909BCF /* Project object */;
+}

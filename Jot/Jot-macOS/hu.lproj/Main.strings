@@ -1,0 +1,132 @@
+
+/* Class = "NSMenuItem"; title = "Jot"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Jot";
+
+/* Class = "NSMenuItem"; title = "Transformations"; ObjectID = "2oI-Rn-ZJC"; */
+"2oI-Rn-ZJC.title" = "Helyettesítések";
+
+/* Class = "NSMenu"; title = "Speech"; ObjectID = "3rS-ZA-NoH"; */
+"3rS-ZA-NoH.title" = "Beszéd";
+
+/* Class = "NSMenuItem"; title = "Enter Full Screen"; ObjectID = "4J7-dP-txa"; */
+"4J7-dP-txa.title" = "Váltás teljes képernyőre";
+
+/* Class = "NSMenuItem"; title = "Quit Jot"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Kilépés a Jot alkalmazásból";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Szerkesztés";
+
+/* Class = "NSMenuItem"; title = "About Jot"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "A Jot névjegye";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Főmenü";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "DOm-Gk-MDX"; */
+"DOm-Gk-MDX.title" = "Kivágás";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Súgó";
+
+/* Class = "NSMenuItem"; title = "Jot Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "A Jot súgója";
+
+/* Class = "NSMenuItem"; title = "View"; ObjectID = "H8h-7b-M4v"; */
+"H8h-7b-M4v.title" = "Nézet";
+
+/* Class = "NSMenu"; title = "View"; ObjectID = "HyV-fh-RgO"; */
+"HyV-fh-RgO.title" = "Nézet";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "JtE-EQ-tDx"; */
+"JtE-EQ-tDx.title" = "Fájl";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Összes megjelenítése";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Összes előtérbe hozása";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Szolgáltatások";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Kis méret";
+
+/* Class = "NSMenuItem"; title = "Hide Jot"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Jot elrejtése";
+
+/* Class = "NSMenuItem"; title = "Stop Speaking"; ObjectID = "Oyz-dy-DGm"; */
+"Oyz-dy-DGm.title" = "Beszéd leállítása";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
+"R4o-n2-Eq4.title" = "Nagyítás";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "Ruw-6m-B2m"; */
+"Ruw-6m-B2m.title" = "Az összes kijelölése";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Ablak";
+
+/* Class = "NSMenuItem"; title = "Capitalize"; ObjectID = "UEZ-Bs-lqG"; */
+"UEZ-Bs-lqG.title" = "Nagy kezdőbetűssé alakítás";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "A többi elrejtése";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "W48-6f-4Dl"; */
+"W48-6f-4Dl.title" = "Szerkesztés";
+
+/* Class = "NSMenuItem"; title = "Delete All"; ObjectID = "XPX-Lf-Ioa"; */
+"XPX-Lf-Ioa.title" = "Az összes törlése";
+
+/* Class = "NSMenuItem"; title = "Start Speaking"; ObjectID = "Ynk-f8-cLZ"; */
+"Ynk-f8-cLZ.title" = "Beszéd elindítása";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Ablak";
+
+/* Class = "NSMenu"; title = "Transformations"; ObjectID = "c8a-y6-VQd"; */
+"c8a-y6-VQd.title" = "Átalakítások";
+
+/* Class = "NSMenuItem"; title = "Make Lower Case"; ObjectID = "d9M-CD-aMd"; */
+"d9M-CD-aMd.title" = "Kisbetűssé alakítás";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "gVA-U4-sdL"; */
+"gVA-U4-sdL.title" = "Beillesztés";
+
+/* Class = "NSMenuItem"; title = "Share"; ObjectID = "h1g-Wb-e4J"; */
+"h1g-Wb-e4J.title" = "Megosztás";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Szolgáltatások";
+
+/* Class = "NSMenuItem"; title = "Redo"; ObjectID = "nvt-DL-9Z8"; */
+"nvt-DL-9Z8.title" = "Ismétlés";
+
+/* Class = "NSMenuItem"; title = "Delete"; ObjectID = "pa3-QI-u2k"; */
+"pa3-QI-u2k.title" = "Törlés";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "rbH-qt-2yU"; */
+"rbH-qt-2yU.title" = "Fájl";
+
+/* Class = "NSMenu"; title = "Jot"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Jot";
+
+/* Class = "NSMenuItem"; title = "Undo"; ObjectID = "uRl-iY-unG"; */
+"uRl-iY-unG.title" = "Visszavonás";
+
+/* Class = "NSMenuItem"; title = "Make Upper Case"; ObjectID = "vmV-6d-7jI"; */
+"vmV-6d-7jI.title" = "Nagybetűssé alakítás";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Súgó";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "x3v-GG-iWU"; */
+"x3v-GG-iWU.title" = "Másolás";
+
+/* Class = "NSMenuItem"; title = "Save..."; ObjectID = "xRs-Px-1uc"; */
+"xRs-Px-1uc.title" = "Mentés...";
+
+/* Class = "NSMenuItem"; title = "Speech"; ObjectID = "xrE-MZ-jX0"; */
+"xrE-MZ-jX0.title" = "Beszéd";

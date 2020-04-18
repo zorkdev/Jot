@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "5C8C8B01-0A61-4C31-BBE7-F87DB54E7E10",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Jot.xcodeproj",
+        "identifier" : "9A40847C2444DDA900909BCF",
+        "name" : "JotUITests-macOS"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/JotKit",
+        "identifier" : "JotKitTests",
+        "name" : "JotKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

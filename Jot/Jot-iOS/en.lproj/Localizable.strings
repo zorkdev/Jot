@@ -1,0 +1,15 @@
+"productName" = "Jot";
+
+"deleteButton" = "Delete";
+"shareButton" = "Share";
+
+"shareActivity" = "Share Jot";
+"deleteActivity" = "Delete Jot";
+"appendActivity" = "Append to Jot";
+"saveActivity" = "Save Jot";
+
+"shareKeyword" = "share";
+"deleteKeyword" = "delete";
+"appendKeyword" = "append";
+"saveKeyword" = "save";
+"noteKeyword" = "note";
