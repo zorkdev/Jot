@@ -24,9 +24,21 @@ final class HomeToolbarTests: XCTestCase {
         XCTAssertEqual(activityHandler.handleActivityParams.map { $0.type }, [.share])
     }
 
+    func testOnSelectedSegment() {
+        MockHighlighterBusinessLogic.highlighters = [
+            MockHighlighterProvider.self,
+            PlainTextHighlighterProvider.self
+        ]
+        toolbar.onSelectedSegment(NSSegmentedControl { $0.selectedSegment = 1 })
+        XCTAssertTrue(appState.highlighterBuinessLogic.highlighter is PlainTextHighlighterProvider.Type)
+        MockHighlighterBusinessLogic.highlighters = [MockHighlighterProvider.self]
+    }
+
     func testDefaultItemIdentifiers() {
         XCTAssertEqual(toolbar.toolbarDefaultItemIdentifiers(NSToolbar()), [
             NSToolbarItem.Identifier("deleteItem"),
+            .flexibleSpace,
+            NSToolbarItem.Identifier("segmentedControlItem"),
             .flexibleSpace,
             NSToolbarItem.Identifier("shareItem")
         ])
@@ -35,6 +47,9 @@ final class HomeToolbarTests: XCTestCase {
     func testItemForItemIdentifier() {
         XCTAssertNotNil(toolbar.toolbar(NSToolbar(),
                                         itemForItemIdentifier: NSToolbarItem.Identifier("shareItem"),
+                                        willBeInsertedIntoToolbar: true))
+        XCTAssertNotNil(toolbar.toolbar(NSToolbar(),
+                                        itemForItemIdentifier: NSToolbarItem.Identifier("segmentedControlItem"),
                                         willBeInsertedIntoToolbar: true))
         XCTAssertNotNil(toolbar.toolbar(NSToolbar(),
                                         itemForItemIdentifier: NSToolbarItem.Identifier("deleteItem"),

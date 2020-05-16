@@ -3,6 +3,9 @@
 "deleteButton" = "Törlés";
 "shareButton" = "Megosztás";
 
+"plainText" = "Szöveg";
+"swift" = "Swift";
+
 "shareActivity" = "Jot megosztása";
 "deleteActivity" = "Jot törlése";
 "appendActivity" = "Hozzáadás a Jothoz";

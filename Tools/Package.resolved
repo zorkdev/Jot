@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "Splash",
+        "repositoryURL": "https://github.com/zorkdev/Splash.git",
+        "state": {
+          "branch": "master",
+          "revision": "c8117b7cd6a428a2e3a1b9080b63870eb05d3815",
+          "version": null
+        }
+      },
+      {
         "package": "SwiftLint",
         "repositoryURL": "https://github.com/realm/SwiftLint.git",
         "state": {

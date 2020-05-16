@@ -13,7 +13,7 @@ struct ResolvedPackages: Decodable {
     }
 
     struct State: Decodable {
-        let version: String
+        let version: String?
     }
 
     let object: Object
@@ -22,10 +22,11 @@ struct ResolvedPackages: Decodable {
 guard let package = CommandLine.arguments.dropFirst().first,
     let resolvedPackagesData = FileManager.default.contents(atPath: "Tools/Package.resolved"),
     let resolvedPackages = try? JSONDecoder().decode(ResolvedPackages.self, from: resolvedPackagesData),
-    let pin = resolvedPackages.object.pins.first(where: { $0.package.lowercased() == package.lowercased() }) else {
+    let pin = resolvedPackages.object.pins.first(where: { $0.package.lowercased() == package.lowercased() }),
+    let version = pin.state.version else {
         print("Could not find package in Package.resolved.")
         exit(1)
 }
 
-print(pin.state.version)
+print(version)
 exit(0)

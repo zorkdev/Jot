@@ -5,6 +5,8 @@ import Combine
 final class HomeViewController: UIViewController {
     private static let padding: CGFloat = 16
 
+    private let segmentedControl = UISegmentedControl()
+
     private let textView = UITextView {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.contentInsetAdjustmentBehavior = .always
@@ -18,7 +20,6 @@ final class HomeViewController: UIViewController {
         $0.autocapitalizationType = .none
         $0.spellCheckingType = .no
         $0.adjustsFontForContentSizeCategory = true
-        $0.font = HomeViewController.createFont()
         $0.textContainerInset = .init(top: HomeViewController.padding,
                                       left: HomeViewController.padding,
                                       bottom: HomeViewController.padding,
@@ -59,6 +60,12 @@ final class HomeViewController: UIViewController {
         appState.activityHandler.handle(activity: Activity.share)
     }
 
+    @objc
+    func onSelectedSegment(_ sender: UISegmentedControl) {
+        let highlighter = type(of: appState.highlighterBuinessLogic).highlighters[sender.selectedSegmentIndex]
+        appState.highlighterBuinessLogic.highlighter = highlighter
+    }
+
     func presentShareSheet() {
         let viewController = UIActivityViewController(activityItems: [appState.textBusinessLogic.text],
                                                       applicationActivities: nil)
@@ -68,14 +75,13 @@ final class HomeViewController: UIViewController {
 }
 
 private extension HomeViewController {
-    static func createFont() -> UIFont {
-        let weight: UIFont.Weight = UIAccessibility.isBoldTextEnabled ? .bold : .regular
-        return UIFontMetrics(forTextStyle: .body)
-            .scaledFont(for: .monospacedSystemFont(ofSize: UIFont.labelFontSize, weight: weight))
-    }
-
     func setUpNavigationBar() {
-        title = Copy.productName
+        type(of: appState.highlighterBuinessLogic).highlighters.enumerated().forEach {
+            segmentedControl.insertSegment(withTitle: $0.element.name, at: $0.offset, animated: false)
+        }
+        segmentedControl.addTarget(self, action: #selector(onSelectedSegment(_:)), for: .valueChanged)
+
+        navigationItem.titleView = segmentedControl
         navigationItem.leftBarButtonItem = .init(barButtonSystemItem: .trash,
                                                  target: self,
                                                  action: #selector(onTapDelete))
@@ -97,7 +103,7 @@ private extension HomeViewController {
 
     func setUpKeyboard() {
         textView.delegate = self
-        textView.text = appState.textBusinessLogic.text
+        updateText()
 
         let keyboardWillOpen = NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)
         let keyboardWillHide = NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)
@@ -122,26 +128,39 @@ private extension HomeViewController {
             .receive(on: DispatchQueue.main)
             .sink {
                 if $0 != self.textView.text {
-                    self.textView.text = $0
+                    self.updateText()
                 }
+            }.store(in: &cancellables)
+
+        appState.highlighterBuinessLogic.highlighterPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+                self.updateSegmentedControl()
+                self.updateText()
             }.store(in: &cancellables)
 
         appState.shareBusinessLogic.sharePublisher
             .receive(on: DispatchQueue.main)
             .sink { self.presentShareSheet() }
             .store(in: &cancellables)
+    }
 
-        NotificationCenter.default
-            .publisher(for: UIAccessibility.boldTextStatusDidChangeNotification)
-            .receive(on: DispatchQueue.main)
-            .sink { _ in self.textView.font = Self.createFont() }
-            .store(in: &cancellables)
+    func updateSegmentedControl() {
+        segmentedControl.selectedSegmentIndex = appState.highlighterBuinessLogic.currentIndex
+    }
+
+    func updateText() {
+        let selectedRange = textView.selectedRange
+        textView.attributedText = appState.highlighterBuinessLogic.highlighter.highlighter
+            .highlight(appState.textBusinessLogic.text)
+        textView.selectedRange = selectedRange
     }
 }
 
 extension HomeViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         appState.textBusinessLogic.text = textView.text
+        updateText()
     }
 
     func textView(_ textView: UITextView,

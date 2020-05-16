@@ -12,6 +12,14 @@ final class JotUITests: XCTestCase {
         givenILaunchTheApp()
 
         whenIEnter("Lorem ipsum\t")
+        whenITapSwiftButton()
+
+        thenICanSee("Lorem ipsum    ")
+
+        whenITapPlainTextButton()
+
+        thenICanSee("Lorem ipsum    ")
+
         takeScreenshot()
         whenITapShareButton()
 
@@ -58,6 +66,23 @@ private extension JotUITests {
     var textView: XCUIElement { app.textViews.firstMatch }
     var shareButton: XCUIElement { app.buttons["Share"].firstMatch }
     var deleteButton: XCUIElement { app.buttons["Delete"].firstMatch }
+
+    var plainTextButton: XCUIElement {
+        #if os(iOS)
+        return app.buttons["Plain text"].firstMatch
+        #elseif os(macOS)
+        return app.radioButtons["Plain text"].firstMatch
+        #endif
+    }
+
+    var swiftButton: XCUIElement {
+        #if os(iOS)
+        return app.buttons["Swift"].firstMatch
+        #elseif os(macOS)
+        return app.radioButtons["Swift"].firstMatch
+        #endif
+    }
+
     #if os(macOS)
     var savePanel: XCUIElement { app.dialogs["Save"].firstMatch }
     #endif
@@ -101,6 +126,20 @@ private extension JotUITests {
         XCTContext.runActivity(named: #function) { _ in
             XCTAssertTrue(shareButton.exists, "Share button doesn't exist")
             shareButton.tap()
+        }
+    }
+
+    func whenITapPlainTextButton() {
+        XCTContext.runActivity(named: #function) { _ in
+            XCTAssertTrue(plainTextButton.exists, "Plain text button doesn't exist")
+            plainTextButton.tap()
+        }
+    }
+
+    func whenITapSwiftButton() {
+        XCTContext.runActivity(named: #function) { _ in
+            XCTAssertTrue(swiftButton.exists, "Swift button doesn't exist")
+            swiftButton.tap()
         }
     }
 

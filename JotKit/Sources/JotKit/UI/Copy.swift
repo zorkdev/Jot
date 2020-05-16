@@ -6,6 +6,9 @@ enum Copy {
     static let deleteButton = NSLocalizedString("deleteButton", bundle: .main, comment: .empty)
     static let shareButton = NSLocalizedString("shareButton", bundle: .main, comment: .empty)
 
+    static let plainText = NSLocalizedString("plainText", bundle: .main, comment: .empty)
+    static let swift = NSLocalizedString("swift", bundle: .main, comment: .empty)
+
     static let shareActivity = NSLocalizedString("shareActivity", bundle: .main, comment: .empty)
     static let deleteActivity = NSLocalizedString("deleteActivity", bundle: .main, comment: .empty)
     static let appendActivity = NSLocalizedString("appendActivity", bundle: .main, comment: .empty)

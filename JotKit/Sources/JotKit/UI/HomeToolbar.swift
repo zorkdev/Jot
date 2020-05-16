@@ -18,6 +18,9 @@ final class HomeToolbar: NSToolbar {
         return item
     }()
 
+    private let segmentedControlItem = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier("segmentedControlItem"))
+    private var segmentedControl: NSSegmentedControl!
+
     private lazy var shareItem: NSToolbarItem = {
         let item = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier("shareItem"))
         let button = NSButton(image: NSImage(named: NSImage.shareTemplateName)!,
@@ -34,6 +37,7 @@ final class HomeToolbar: NSToolbar {
         self.appState = appState
         super.init(identifier: "homeToolbar")
         delegate = self
+        setUp()
         setUpBindings()
     }
 
@@ -46,13 +50,34 @@ final class HomeToolbar: NSToolbar {
     func onTapShare() {
         appState.activityHandler.handle(activity: Activity.share)
     }
+
+    @objc
+    func onSelectedSegment(_ sender: NSSegmentedControl) {
+        appState.highlighterBuinessLogic.highlighter = type(of: appState.highlighterBuinessLogic)
+            .highlighters[sender.selectedSegment]
+    }
 }
 
 private extension HomeToolbar {
+    func setUp() {
+        let labels = type(of: appState.highlighterBuinessLogic).highlighters.map { $0.name }
+        segmentedControl = NSSegmentedControl(labels: labels,
+                                              trackingMode: .selectOne,
+                                              target: self,
+                                              action: #selector(onSelectedSegment))
+        segmentedControl.selectedSegment = appState.highlighterBuinessLogic.currentIndex
+        segmentedControlItem.view = segmentedControl
+    }
+
     func setUpBindings() {
         appState.shareBusinessLogic.sharePublisher
             .receive(on: DispatchQueue.main)
             .sink { self.presentShareSheet() }
+            .store(in: &cancellables)
+
+        appState.highlighterBuinessLogic.highlighterPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { _ in self.updateSegmentedControl() }
             .store(in: &cancellables)
     }
 
@@ -61,11 +86,17 @@ private extension HomeToolbar {
         let sharingPicker = NSSharingServicePicker(items: [appState.textBusinessLogic.text])
         sharingPicker.show(relativeTo: view.frame, of: view, preferredEdge: .maxX)
     }
+
+    func updateSegmentedControl() {
+        segmentedControl.setSelected(true, forSegment: appState.highlighterBuinessLogic.currentIndex)
+    }
 }
 
 extension HomeToolbar: NSToolbarDelegate {
     func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
         [deleteItem.itemIdentifier,
+         NSToolbarItem.Identifier.flexibleSpace,
+         segmentedControlItem.itemIdentifier,
          NSToolbarItem.Identifier.flexibleSpace,
          shareItem.itemIdentifier]
     }
@@ -73,7 +104,7 @@ extension HomeToolbar: NSToolbarDelegate {
     func toolbar(_ toolbar: NSToolbar,
                  itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier,
                  willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
-        [deleteItem, shareItem].first { $0.itemIdentifier == itemIdentifier }
+        [deleteItem, segmentedControlItem, shareItem].first { $0.itemIdentifier == itemIdentifier }
     }
 }
 #endif

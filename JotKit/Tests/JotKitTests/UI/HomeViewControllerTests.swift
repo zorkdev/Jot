@@ -65,6 +65,18 @@ final class HomeViewControllerTests: XCTestCase {
         XCTAssertEqual(activityHandler.handleActivityParams.map { $0.type }, [.share])
     }
 
+    func testOnSelectedSegment() {
+        MockHighlighterBusinessLogic.highlighters = [MockHighlighterProvider.self, SwiftHighlighterProvider.self]
+        let segmentedControl = UISegmentedControl {
+            $0.insertSegment(withTitle: "0", at: 0, animated: false)
+            $0.insertSegment(withTitle: "1", at: 1, animated: false)
+            $0.selectedSegmentIndex = 1
+        }
+        viewController.onSelectedSegment(segmentedControl)
+        XCTAssertTrue(appState.highlighterBuinessLogic.highlighter == SwiftHighlighterProvider.self)
+        MockHighlighterBusinessLogic.highlighters = [MockHighlighterProvider.self]
+    }
+
     func testPresentShareSheet() {
         let window = UIWindow()
         window.rootViewController = viewController
@@ -94,11 +106,6 @@ final class HomeViewControllerTests: XCTestCase {
                                         object: nil,
                                         userInfo: [UIResponder.keyboardFrameEndUserInfoKey: CGRect.zero])
         NotificationCenter.default.post(notification)
-        wait()
-    }
-
-    func testBoldText() {
-        NotificationCenter.default.post(name: UIAccessibility.boldTextStatusDidChangeNotification, object: nil)
         wait()
     }
 }

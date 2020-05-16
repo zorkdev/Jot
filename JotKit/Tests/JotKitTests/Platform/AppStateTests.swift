@@ -8,16 +8,19 @@ final class AppStateTests: XCTestCase {
                                 dataService: MockDataService(),
                                 reviewBusinessLogic: MockReviewBusinessLogic(),
                                 textBusinessLogic: MockTextBusinessLogic(),
+                                highlighterBuinessLogic: MockHighlighterBusinessLogic(),
                                 shareBusinessLogic: MockShareBusinessLogic(),
                                 activityHandler: MockActivityHandler())
         #elseif os(macOS)
         let appState = AppState(loggingService: MockLoggingService(),
                                 dataService: MockDataService(),
                                 textBusinessLogic: MockTextBusinessLogic(),
+                                highlighterBuinessLogic: MockHighlighterBusinessLogic(),
                                 shareBusinessLogic: MockShareBusinessLogic(),
                                 activityHandler: MockActivityHandler())
         #endif
         XCTAssertTrue(appState.textBusinessLogic is MockTextBusinessLogic)
+        XCTAssertTrue(appState.highlighterBuinessLogic is MockHighlighterBusinessLogic)
         XCTAssertTrue(appState.shareBusinessLogic is MockShareBusinessLogic)
         XCTAssertTrue(appState.activityHandler is MockActivityHandler)
         XCTAssertTrue(appState.activityHandler.appState is AppState)
@@ -26,6 +29,7 @@ final class AppStateTests: XCTestCase {
     func testConvenienceInit() {
         let appState = AppState()
         XCTAssertTrue(appState.textBusinessLogic is TextBusinessLogic)
+        XCTAssertTrue(appState.highlighterBuinessLogic is HighlighterBusinessLogic)
         XCTAssertTrue(appState.shareBusinessLogic is ShareBusinessLogic)
         XCTAssertTrue(appState.activityHandler is ActivityHandler)
         XCTAssertTrue(appState.activityHandler.appState is AppState)

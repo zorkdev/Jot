@@ -10,9 +10,11 @@ let package = Package(
     products: [
         .library(name: "JotKit", targets: ["JotKit"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/zorkdev/Splash.git", .branch("master"))
+    ],
     targets: [
-        .target(name: "JotKit", dependencies: []),
+        .target(name: "JotKit", dependencies: ["Splash"]),
         .testTarget(name: "JotKitTests", dependencies: ["JotKit"])
     ]
 )

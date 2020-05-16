@@ -10,7 +10,7 @@ jot,note,notes,write
 
 ---
 
-Jot is a minimal text editor designed to help you keep track of your text snippets. It's your smart pasteboard. 
+Jot is a minimal text editor designed to help you keep track of your text snippets. It's your smart pasteboard. It can even highlight Swift code!
 
 Your text is synched across your devices using iCloud so you can continue where you left off.
 

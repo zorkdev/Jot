@@ -5,13 +5,19 @@ import XCTest
 final class HomeViewTests: XCTestCase {
     var appState: MockAppState!
     var textBusinessLogic: MockTextBusinessLogic!
+    var highlighterBusinessLogic: MockHighlighterBusinessLogic!
+    var highlighter: MockHighlighter!
     var view: HomeView!
 
     override func setUp() {
         super.setUp()
         appState = .init()
         textBusinessLogic = appState.textBusinessLogic as? MockTextBusinessLogic
+        highlighterBusinessLogic = appState.highlighterBuinessLogic as? MockHighlighterBusinessLogic
+        highlighter = MockHighlighter()
+        MockHighlighterProvider.highlighter = highlighter
         view = .init(appState: appState)
+        wait()
     }
 
     func testInit() {
@@ -20,6 +26,8 @@ final class HomeViewTests: XCTestCase {
 
     func testTextDidChange() {
         view.textDidChange(.init(name: NSText.didChangeNotification))
+        wait()
+        XCTAssertEqual(highlighter.highlightParams, [.empty, .empty, .empty])
     }
 
     func testTextViewDoCommandBy() {
@@ -34,6 +42,7 @@ final class HomeViewTests: XCTestCase {
         XCTAssertFalse(
             view.textView(textView, doCommandBy: #selector(textView.insertText(_:replacementRange:)))
         )
+        wait()
     }
 
     func testBindings() {

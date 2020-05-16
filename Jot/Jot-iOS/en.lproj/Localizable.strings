@@ -3,6 +3,9 @@
 "deleteButton" = "Delete";
 "shareButton" = "Share";
 
+"plainText" = "Plain text";
+"swift" = "Swift";
+
 "shareActivity" = "Share Jot";
 "deleteActivity" = "Delete Jot";
 "appendActivity" = "Append to Jot";

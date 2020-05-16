@@ -45,7 +45,7 @@ private extension HomeView {
         scrollView.documentView = textView
         addSubview(scrollView)
         textView.delegate = self
-        textView.string = appState.textBusinessLogic.text
+        updateText()
     }
 
     func setUpBindings() {
@@ -53,15 +53,29 @@ private extension HomeView {
             .receive(on: DispatchQueue.main)
             .sink {
                 if $0 != self.textView.string {
-                    self.textView.string = $0
+                    self.updateText()
                 }
             }.store(in: &cancellables)
+
+        appState.highlighterBuinessLogic.highlighterPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { _ in self.updateText() }
+            .store(in: &cancellables)
+    }
+
+    func updateText() {
+        let selectedRange = textView.selectedRange
+        let attributedString = appState.highlighterBuinessLogic.highlighter.highlighter
+            .highlight(appState.textBusinessLogic.text)
+        textView.textStorage?.setAttributedString(attributedString)
+        textView.selectedRange = selectedRange
     }
 }
 
 extension HomeView: NSTextViewDelegate {
     func textDidChange(_ notification: Notification) {
         appState.textBusinessLogic.text = textView.string
+        updateText()
     }
 
     func textView(_ textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
