@@ -30,7 +30,7 @@ final class HomeToolbarTests: XCTestCase {
             PlainTextHighlighterProvider.self
         ]
         toolbar.onSelectedSegment(NSSegmentedControl { $0.selectedSegment = 1 })
-        XCTAssertTrue(appState.highlighterBuinessLogic.highlighter is PlainTextHighlighterProvider.Type)
+        XCTAssertTrue(appState.highlighterBusinessLogic.highlighter is PlainTextHighlighterProvider.Type)
         MockHighlighterBusinessLogic.highlighters = [MockHighlighterProvider.self]
     }
 

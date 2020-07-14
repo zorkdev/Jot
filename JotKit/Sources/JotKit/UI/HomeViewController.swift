@@ -62,8 +62,8 @@ final class HomeViewController: UIViewController {
 
     @objc
     func onSelectedSegment(_ sender: UISegmentedControl) {
-        let highlighter = type(of: appState.highlighterBuinessLogic).highlighters[sender.selectedSegmentIndex]
-        appState.highlighterBuinessLogic.highlighter = highlighter
+        let highlighter = type(of: appState.highlighterBusinessLogic).highlighters[sender.selectedSegmentIndex]
+        appState.highlighterBusinessLogic.highlighter = highlighter
     }
 
     func presentShareSheet() {
@@ -76,7 +76,7 @@ final class HomeViewController: UIViewController {
 
 private extension HomeViewController {
     func setUpNavigationBar() {
-        type(of: appState.highlighterBuinessLogic).highlighters.enumerated().forEach {
+        type(of: appState.highlighterBusinessLogic).highlighters.enumerated().forEach {
             segmentedControl.insertSegment(withTitle: $0.element.name, at: $0.offset, animated: false)
         }
         segmentedControl.addTarget(self, action: #selector(onSelectedSegment(_:)), for: .valueChanged)
@@ -132,7 +132,7 @@ private extension HomeViewController {
                 }
             }.store(in: &cancellables)
 
-        appState.highlighterBuinessLogic.highlighterPublisher
+        appState.highlighterBusinessLogic.highlighterPublisher
             .receive(on: DispatchQueue.main)
             .sink { _ in
                 self.updateSegmentedControl()
@@ -146,12 +146,12 @@ private extension HomeViewController {
     }
 
     func updateSegmentedControl() {
-        segmentedControl.selectedSegmentIndex = appState.highlighterBuinessLogic.currentIndex
+        segmentedControl.selectedSegmentIndex = appState.highlighterBusinessLogic.currentIndex
     }
 
     func updateText() {
         let selectedRange = textView.selectedRange
-        textView.attributedText = appState.highlighterBuinessLogic.highlighter.highlighter
+        textView.attributedText = appState.highlighterBusinessLogic.highlighter.highlighter
             .highlight(appState.textBusinessLogic.text)
         textView.selectedRange = selectedRange
     }

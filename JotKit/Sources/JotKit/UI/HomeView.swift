@@ -57,7 +57,7 @@ private extension HomeView {
                 }
             }.store(in: &cancellables)
 
-        appState.highlighterBuinessLogic.highlighterPublisher
+        appState.highlighterBusinessLogic.highlighterPublisher
             .receive(on: DispatchQueue.main)
             .sink { _ in self.updateText() }
             .store(in: &cancellables)
@@ -65,7 +65,7 @@ private extension HomeView {
 
     func updateText() {
         let selectedRange = textView.selectedRange
-        let attributedString = appState.highlighterBuinessLogic.highlighter.highlighter
+        let attributedString = appState.highlighterBusinessLogic.highlighter.highlighter
             .highlight(appState.textBusinessLogic.text)
         textView.textStorage?.setAttributedString(attributedString)
         textView.selectedRange = selectedRange

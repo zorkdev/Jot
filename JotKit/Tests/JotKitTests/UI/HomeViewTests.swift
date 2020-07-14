@@ -13,7 +13,7 @@ final class HomeViewTests: XCTestCase {
         super.setUp()
         appState = .init()
         textBusinessLogic = appState.textBusinessLogic as? MockTextBusinessLogic
-        highlighterBusinessLogic = appState.highlighterBuinessLogic as? MockHighlighterBusinessLogic
+        highlighterBusinessLogic = appState.highlighterBusinessLogic as? MockHighlighterBusinessLogic
         highlighter = MockHighlighter()
         MockHighlighterProvider.highlighter = highlighter
         view = .init(appState: appState)

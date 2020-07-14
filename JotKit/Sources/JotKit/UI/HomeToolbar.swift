@@ -53,19 +53,19 @@ final class HomeToolbar: NSToolbar {
 
     @objc
     func onSelectedSegment(_ sender: NSSegmentedControl) {
-        appState.highlighterBuinessLogic.highlighter = type(of: appState.highlighterBuinessLogic)
+        appState.highlighterBusinessLogic.highlighter = type(of: appState.highlighterBusinessLogic)
             .highlighters[sender.selectedSegment]
     }
 }
 
 private extension HomeToolbar {
     func setUp() {
-        let labels = type(of: appState.highlighterBuinessLogic).highlighters.map { $0.name }
+        let labels = type(of: appState.highlighterBusinessLogic).highlighters.map { $0.name }
         segmentedControl = NSSegmentedControl(labels: labels,
                                               trackingMode: .selectOne,
                                               target: self,
                                               action: #selector(onSelectedSegment))
-        segmentedControl.selectedSegment = appState.highlighterBuinessLogic.currentIndex
+        segmentedControl.selectedSegment = appState.highlighterBusinessLogic.currentIndex
         segmentedControlItem.view = segmentedControl
     }
 
@@ -75,7 +75,7 @@ private extension HomeToolbar {
             .sink { self.presentShareSheet() }
             .store(in: &cancellables)
 
-        appState.highlighterBuinessLogic.highlighterPublisher
+        appState.highlighterBusinessLogic.highlighterPublisher
             .receive(on: DispatchQueue.main)
             .sink { _ in self.updateSegmentedControl() }
             .store(in: &cancellables)
@@ -88,7 +88,7 @@ private extension HomeToolbar {
     }
 
     func updateSegmentedControl() {
-        segmentedControl.setSelected(true, forSegment: appState.highlighterBuinessLogic.currentIndex)
+        segmentedControl.setSelected(true, forSegment: appState.highlighterBusinessLogic.currentIndex)
     }
 }
 

@@ -73,7 +73,7 @@ final class HomeViewControllerTests: XCTestCase {
             $0.selectedSegmentIndex = 1
         }
         viewController.onSelectedSegment(segmentedControl)
-        XCTAssertTrue(appState.highlighterBuinessLogic.highlighter == SwiftHighlighterProvider.self)
+        XCTAssertTrue(appState.highlighterBusinessLogic.highlighter == SwiftHighlighterProvider.self)
         MockHighlighterBusinessLogic.highlighters = [MockHighlighterProvider.self]
     }
 

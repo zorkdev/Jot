@@ -2,7 +2,7 @@ import Foundation
 
 public protocol AppStateType: AnyObject {
     var textBusinessLogic: TextBusinessLogicType { get }
-    var highlighterBuinessLogic: HighlighterBusinessLogicType { get }
+    var highlighterBusinessLogic: HighlighterBusinessLogicType { get }
     var shareBusinessLogic: ShareBusinessLogicType { get }
     var activityHandler: ActivityHandlerType { get }
 }
@@ -16,7 +16,7 @@ public final class AppState: AppStateType {
     #endif
 
     public let textBusinessLogic: TextBusinessLogicType
-    public let highlighterBuinessLogic: HighlighterBusinessLogicType
+    public let highlighterBusinessLogic: HighlighterBusinessLogicType
     public let shareBusinessLogic: ShareBusinessLogicType
     public let activityHandler: ActivityHandlerType
 
@@ -25,14 +25,14 @@ public final class AppState: AppStateType {
          dataService: DataService,
          reviewBusinessLogic: ReviewBusinessLogicType,
          textBusinessLogic: TextBusinessLogicType,
-         highlighterBuinessLogic: HighlighterBusinessLogicType,
+         highlighterBusinessLogic: HighlighterBusinessLogicType,
          shareBusinessLogic: ShareBusinessLogicType,
          activityHandler: ActivityHandlerType) {
         self.loggingService = loggingService
         self.dataService = dataService
         self.reviewBusinessLogic = reviewBusinessLogic
         self.textBusinessLogic = textBusinessLogic
-        self.highlighterBuinessLogic = highlighterBuinessLogic
+        self.highlighterBusinessLogic = highlighterBusinessLogic
         self.shareBusinessLogic = shareBusinessLogic
         self.activityHandler = activityHandler
         activityHandler.appState = self
@@ -49,7 +49,7 @@ public final class AppState: AppStateType {
                                                            textBusinessLogic: textBusinessLogic,
                                                            shareBusinessLogic: shareBusinessLogic),
                   textBusinessLogic: textBusinessLogic,
-                  highlighterBuinessLogic: HighlighterBusinessLogic(dataService: dataService),
+                  highlighterBusinessLogic: HighlighterBusinessLogic(dataService: dataService),
                   shareBusinessLogic: shareBusinessLogic,
                   activityHandler: ActivityHandler())
     }
@@ -58,13 +58,13 @@ public final class AppState: AppStateType {
     init(loggingService: LoggingService,
          dataService: DataService,
          textBusinessLogic: TextBusinessLogicType,
-         highlighterBuinessLogic: HighlighterBusinessLogicType,
+         highlighterBusinessLogic: HighlighterBusinessLogicType,
          shareBusinessLogic: ShareBusinessLogicType,
          activityHandler: ActivityHandlerType) {
         self.loggingService = loggingService
         self.dataService = dataService
         self.textBusinessLogic = textBusinessLogic
-        self.highlighterBuinessLogic = highlighterBuinessLogic
+        self.highlighterBusinessLogic = highlighterBusinessLogic
         self.shareBusinessLogic = shareBusinessLogic
         self.activityHandler = activityHandler
         activityHandler.appState = self
@@ -77,7 +77,7 @@ public final class AppState: AppStateType {
         self.init(loggingService: loggingService,
                   dataService: dataService,
                   textBusinessLogic: textBusinessLogic,
-                  highlighterBuinessLogic: HighlighterBusinessLogic(dataService: dataService),
+                  highlighterBusinessLogic: HighlighterBusinessLogic(dataService: dataService),
                   shareBusinessLogic: ShareBusinessLogic(textBusinessLogic: textBusinessLogic),
                   activityHandler: ActivityHandler())
     }
