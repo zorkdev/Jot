@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "Ink",
+        "repositoryURL": "https://github.com/zorkdev/Ink.git",
+        "state": {
+          "branch": "master",
+          "revision": "e6de51b65887f47a44b955b54cb0b529d5c2a828",
+          "version": null
+        }
+      },
+      {
         "package": "Nimble",
         "repositoryURL": "https://github.com/Quick/Nimble.git",
         "state": {
