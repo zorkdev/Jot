@@ -4,6 +4,7 @@ enum Copy {
     static let productName = NSLocalizedString("productName", bundle: .main, comment: .empty)
 
     static let deleteButton = NSLocalizedString("deleteButton", bundle: .main, comment: .empty)
+    static let actionButton = NSLocalizedString("actionButton", bundle: .main, comment: .empty)
     static let shareButton = NSLocalizedString("shareButton", bundle: .main, comment: .empty)
 
     static let plainText = NSLocalizedString("plainText", bundle: .main, comment: .empty)

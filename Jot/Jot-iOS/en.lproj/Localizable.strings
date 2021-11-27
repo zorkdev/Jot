@@ -1,6 +1,7 @@
 "productName" = "Jot";
 
 "deleteButton" = "Delete";
+"actionButton" = "Actions";
 "shareButton" = "Share";
 
 "plainText" = "Plain text";

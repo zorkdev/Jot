@@ -1,6 +1,7 @@
 "productName" = "Jot";
 
 "deleteButton" = "Törlés";
+"actionButton" = "Műveletek";
 "shareButton" = "Megosztás";
 
 "plainText" = "Szöveg";

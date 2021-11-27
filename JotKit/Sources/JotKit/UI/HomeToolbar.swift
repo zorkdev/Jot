@@ -18,6 +18,18 @@ final class HomeToolbar: NSToolbar {
         return item
     }()
 
+    private lazy var actionItem: NSToolbarItem = {
+        let item = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier("actionItem"))
+        let button = NSButton(title: "􀍱",
+                              target: self,
+                              action: #selector(onTapAction))
+        button.bezelStyle = .texturedRounded
+        item.view = button
+        item.label = Copy.actionButton
+        item.toolTip = Copy.actionButton
+        return item
+    }()
+
     private let segmentedControlItem = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier("segmentedControlItem"))
     private var segmentedControl: NSSegmentedControl!
 
@@ -44,6 +56,11 @@ final class HomeToolbar: NSToolbar {
     @objc
     func onTapDelete() {
         appState.activityHandler.handle(activity: Activity.delete)
+    }
+
+    @objc
+    func onTapAction() {
+        try? appState.actionBusinessLogic.execute(Actions.GenerateUUID.self)
     }
 
     @objc
@@ -95,6 +112,7 @@ private extension HomeToolbar {
 extension HomeToolbar: NSToolbarDelegate {
     func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
         [deleteItem.itemIdentifier,
+         actionItem.itemIdentifier,
          NSToolbarItem.Identifier.flexibleSpace,
          segmentedControlItem.itemIdentifier,
          NSToolbarItem.Identifier.flexibleSpace,
@@ -104,7 +122,7 @@ extension HomeToolbar: NSToolbarDelegate {
     func toolbar(_ toolbar: NSToolbar,
                  itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier,
                  willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
-        [deleteItem, segmentedControlItem, shareItem].first { $0.itemIdentifier == itemIdentifier }
+        [deleteItem, actionItem, segmentedControlItem, shareItem].first { $0.itemIdentifier == itemIdentifier }
     }
 }
 #endif
