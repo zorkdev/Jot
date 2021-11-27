@@ -4,6 +4,7 @@ import Combine
 public protocol TextBusinessLogicType: AnyObject {
     var text: String { get set }
     var textPublisher: AnyPublisher<String, Never> { get }
+    var counterPublisher: PassthroughSubject<String, Never> { get }
 
     #if os(iOS)
     var deletePublisher: PassthroughSubject<Void, Never> { get }
@@ -21,6 +22,8 @@ final class TextBusinessLogic: TextBusinessLogicType {
 
     @Published var text: String
     var textPublisher: AnyPublisher<String, Never> { $text.removeDuplicates().eraseToAnyPublisher() }
+
+    let counterPublisher = PassthroughSubject<String, Never>()
 
     #if os(iOS)
     let deletePublisher = PassthroughSubject<Void, Never>()
@@ -61,6 +64,16 @@ private extension TextBusinessLogic {
         dataService.publisher
             .receive(on: DispatchQueue.main)
             .sink { self.text = self.dataService.load(key: Self.key) ?? .empty }
+            .store(in: &cancellables)
+
+        $text
+            .removeDuplicates()
+            .map { text in
+                let lines = text.components(separatedBy: .newlines).count
+                let words = text.components(separatedBy: .whitespaces).filter { $0.isEmpty == false }.count
+                let characters = text.count
+                return "\(lines) lines • \(words) words • \(characters) characters"
+            }.subscribe(counterPublisher)
             .store(in: &cancellables)
     }
 }

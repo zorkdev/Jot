@@ -139,6 +139,11 @@ private extension HomeViewController {
                 self.updateText()
             }.store(in: &cancellables)
 
+        appState.textBusinessLogic.counterPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { self.title = $0 }
+            .store(in: &cancellables)
+
         appState.shareBusinessLogic.sharePublisher
             .receive(on: DispatchQueue.main)
             .sink { self.presentShareSheet() }
